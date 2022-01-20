@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - HTML Formatting</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&display=swap');
+        body {margin: 0;}
+        .container { display: flex; flex-direction: column; align-items: center; font-family: 'Black Han Sans', sans-serif; background-color: #feceab;}
+        img {height: 300px;}
+        a:hover {opacity: 50%;}
+        h1 {text-decoration: underline;}
+        h2 {margin-top: 50px;}
+        pre {font-size: 1.2rem;}
+        #map {margin-bottom: 30px;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML FORMATTING</h1> 
+        <br />
+        <h2>Search Engines</h2>
+        <div class="technologies"> 
+            <a href="https://www.html.com" target="_blank"><img src="assets/html.png" alt="html 5 icon"></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="assets/css.png"
+                    alt="css icon"></a>
+            <a href="https://www.javascript.info" target="_blank"><img src="assets/js.png" alt="javascript icon"></a>
+        </div>
+        <br />
+        <h2>Day 1 of Kodego Bootcamp</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kh3GBZhaOHk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <br />
+        <h2>What is a Search Engine?</h2>
+        <pre>
+            A <strong>search engine</strong> is a <u>software system</u> that is designed to carry out web searches. 
+            They search the <span style="color: blue;">World Wide Web</span> in a systematic way for particular information
+            in a textual web search query.
+        </pre>
+        <ul> <span style="color:green; text-decoration: underline; font-size: 1.4rem;"><b>Search Engines</b></span>
+            <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+            <li><a href="https://www.bing.com/" target="_blank">Bing</a></li>
+            <li><a href="https://ph.yahoo.com/?p=us" target="_blank">Yahoo</a></li>
+        </ul>
+        <br />
+        <h2>Google HQ in the Philippines</h2>
+        <iframe id="map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15447.440121909327!2d121.0470371!3d14.5499957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf382855249943b23!2sGoogle%20Philippines!5e0!3m2!1sen!2sph!4v1642561788856!5m2!1sen!2sph"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</body>
+</html>
