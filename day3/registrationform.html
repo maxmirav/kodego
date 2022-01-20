@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-image: url(office.png);
+            color: #E0E0E0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            background-color: #6200EA;
+            border-radius: 10px;
+            opacity: 80%;
+            border: none;
+            width: 600px;
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            opacity: 100%;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        input {
+            margin: 0 auto;
+            width: 90%;
+            display: block;
+            border: 0;
+            padding: 5px;
+            border-radius: 3px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .checkbox-label,
+        .gender-label {
+            display: block;
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            width: 5%;
+            display: inline;
+            margin: 6px;
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+        }
+
+        input[type=reset] {
+            background-color: #ca2828;
+            color: white;
+        }
+
+
+        input[type=submit] {
+            background-color: #11b835;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Registration Form</h1>
+        <p id="description">Thank you for taking the time to fill out this form!</p>
+    </header>
+    <div class="container">
+        <form id="reg-form">
+            <fieldset>
+                <label>First Name <input type="text" placeholder="Enter your first name"
+                        required></label>
+                <label>Middle Name <input type="text" placeholder="Enter your middle name"
+                        required></label>
+                <label>Last Name <input type="text" placeholder="Enter your last name"
+                        required></label>
+
+                <label>Address
+                    <textarea name="address" rows="3" cols="30"
+                        placeholder="Enter your permanent address here..."></textarea>
+                </label>
+                <br />
+                <label id="gender">Gender</label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="1">Female
+                </label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="2">Male
+                </label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="3">Others
+                </label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="4">Prefer Not to Say
+                </label>
+                <br />
+                <label id="dropdown">What is your career path?
+                    <select>
+                        <option disabled selected>Select Career Path</option>
+                        <option value="1">Front-end Developer</option>
+                        <option value="2">Back-end Developer</option>
+                        <option value="3">Full-stack Developer</option>
+                    </select>
+                </label>
+
+                <p>What are your Technical Skills? <span>Check all that apply</span></p>
+                <label class="checkbox-label"><input type="checkbox" value="1">HTML</label>
+                <label class="checkbox-label"><input type="checkbox" value="2">CSS</label>
+                <label class="checkbox-label"><input type="checkbox" value="3">Javascript</label>
+                <label class="checkbox-label"><input type="checkbox" value="4">Mysql</label>
+                <label class="checkbox-label"><input type="checkbox" value="5">Php</label>
+                <label class="checkbox-label"><input type="checkbox" value="6">Laravel</label>
+                <label class="checkbox-label"><input type="checkbox" value="7">React JS</label>
+
+                <br />
+                <input type="submit" value="Submit" id="submit" />
+                <input type="reset" value="Reset" id="reset" />
+            </fieldset>
+    </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input Control</title>
+    <style>
+        body {background-image: url(office.png); color: white;}
+        input[type="text"] { display: block; }
+        textarea {display: block;}
+    </style>
+</head>
+<body>
+    <h1>HTML Forms Examples</h1>
+    <form action="studenttable.html">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="first_name">First Name: <input type="text" name="first_name" size="50" placeholder="First Name Here" /> </label><br />
+            <label for="last_name"></label> Last Name <input type="text" name="last_name" size="50"/><br />
+            <br />
+            <label>Birthdate</label>
+            <input type="date" name="birthdate"><br />
+            <label for="describe-yourself">Describe yourself in lots of words<textarea name="" id="" cols="50" rows="5">Enter description here....</textarea></label>
+            <br />
+            <label>Frontend Technologies</label>
+            <input type="checkbox" name="html">HTML
+            <input type="checkbox" name="css">CSS
+            <input type="checkbox" name="javascript">Javascript
+            <br />
+            <label>Gender</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+            <br />    
+            <label>Backend Technologies</label>
+            <select name="technologies">
+                <option>Select option</option>
+                <option value="php">PHP</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="rubyonrails">Ruby on Rails</option>
+            </select>
+            <br>
+            <label>Full Stack Technologies</label>
+            <select name="fullstack">
+                <optgroup label="Frontend Technologies">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">Javascript</option>
+                </optgroup>
+                <optgroup label="Backend Technologies">
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="rubyonrails">Ruby on Rails</option>
+                </optgroup>
+            </select>
+            <br />
+            <br />
+            <label>Select a photo</label>
+            <input type="file" name="photo" accept="image/">
+        </fieldset>
+
+        <fieldset>
+            <legend>Login Information</legend>
+            <label for="">Username<input type="text" name="username" maxlength="10"></label>
+            <label for="">Password<input type="password" name="password"></label>
+            <br />
+            <input type="submit" value="Submit"><input type="reset">
+            <button type="button" onclick="alert('Hello!')">Click Me.</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
