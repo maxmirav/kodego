@@ -66,6 +66,7 @@
         textarea {
             display: block;
             width: 100%;
+            border-radius: 3px;
         }
 
         input[type=reset] {
@@ -89,11 +90,11 @@
     <div class="container">
         <form id="reg-form">
             <fieldset>
-                <label>First Name <input type="text" placeholder="Enter your first name"
+                <label>First Name <input type="text" name="firstname" placeholder="Enter your first name"
                         required></label>
-                <label>Middle Name <input type="text" placeholder="Enter your middle name"
+                <label>Middle Name <input type="text" name="middlename" placeholder="Enter your middle name"
                         required></label>
-                <label>Last Name <input type="text" placeholder="Enter your last name"
+                <label>Last Name <input type="text" name="lastname" placeholder="Enter your last name"
                         required></label>
 
                 <label>Address
@@ -112,7 +113,7 @@
                     <input type="radio" name="gender" value="3">Others
                 </label>
                 <label class="gender-label">
-                    <input type="radio" name="gender" value="4">Prefer Not to Say
+                    <input type="radio" name="gender" value="4">Prefer not to say
                 </label>
                 <br />
                 <label id="dropdown">What is your career path?
