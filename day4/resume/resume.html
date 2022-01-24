@@ -11,39 +11,238 @@
 
 <body>
     <!-- Profile -->
-    <header>
-        <!-- <img src="assets/me_icon.png" alt="A picture of Max Miravite seated on the ground"> -->
-
+    <header class="card">
+        <img class="profile-pic" src="assets/me_icon.png" alt="A picture of Max Miravite seated on the ground">
+        <h1>Max Miravite</h1>
+        <h3>Dept. of Magical Law Enforcement</h3>
+        <h4>Junior Auror</h4>
+        <div class="proj-exp-container">
+            <p id="proj">25+ Missions</p>
+            <p id="exp">4+ Experience</p>
+        </div>
+        <div class="profile-buttons-container">
+            <button type="button" onclick="alert('hire me pls :(')">Hire</button>
+            <button><a href="#message-me">Message</a> </button>
+        </div>
     </header>
 
     <!-- Contact -->
-    <section class="contact">
-
+    <section class="contact card">
+        <h2 class="max-heading-text">Contact</h2>
+        <div class="socials-container">
+            <a href="https://www.facebook.com/alexis.miravite/"><img src="assets/fb-icon.png" alt="facebook icon"></a>
+            <a href="https://twitter.com/MaxMiravite"><img src="assets/twitter-icon.png" alt="twitter icon"></a>
+            <a href="https://www.linkedin.com/in/marie-alexis-miravite-02717166/"><img src="assets/linkedin-icon.png"
+                    alt="linkedin icon"></a>
+            <a href="https://github.com/maxmirav"><img src="assets/github-icon.png" alt="github icon"></a>
+        </div>
+        <hr />
+        <h6>Mobile No.</h6>
+        <div class="mobile-container">
+            <p class="phone-number"><img src="assets/whatsapp-icon.png" alt="whatsapp-icon">+63912-345-6789</p>
+        </div>
+        <hr />
+        <h6>Email Address</h6>
+        <div class="email-container">
+            <p><a href="mailto:max@miravite.com"><img src="assets/gmail-icon.png" alt="gmail icon">max@miravite.com</a>
+            </p>
+        </div>
     </section>
 
     <!-- About me -->
-    <section class="about">
-
+    <section class="about card opac">
+        <h2>About Me</h2>
+        <hr />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a urna posuere, aliquet elit in, fermentum
+            ligula. Sed est augue, molestie sed tortor sed, posuere commodo lectus. Aliquam blandit eros a nibh
+            tristique, id accumsan lacus rutrum. Mauris ornare neque vitae mollis luctus. Proin malesuada quam ut dui
+            sagittis
+        </p>
+        <button class="download"><a href="https://drive.google.com/file/d/1FY2_o9rpohV7uhRgoyFUNYp1pBGwca7d/view?usp=sharing" target="_blank">Download a printable version of this resume</a></button>
     </section>
 
     <!-- Work Experience -->
-    <section class="experience">
-
+    <section class="experience card opac">
+        <h2>Work Experience</h2>
+        <hr />
+        <div class="work-item">
+            <h4>Jr. Auror</h4>
+            <table>
+                <tr>
+                    <td class="company-cell">Ministry of Magic</td>
+                    <td class="duration-cell">
+                        <h6>Apr 2018 - present</h6>
+                    </td>
+                </tr>
+            </table>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a urna posuere, aliquet elit in,
+                fermentum ligula</p>
+        </div>
+        <hr />
+        <div class="work-item">
+            <h4>Potions Teaching Assistant</h4>
+            <table>
+                <tr>
+                    <td class="company-cell">Hogwarts</td>
+                    <td class="duration-cell">
+                        <h6>Jan 2016 - Mar 2018</h6>
+                    </td>
+                </tr>
+            </table>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a urna posuere, aliquet elit in,
+                fermentum ligula</p>
+        </div>
+        <hr />
+        <div class="work-item">
+            <h4>Part-time Bartender</h4>
+            <table>
+                <tr>
+                    <td class="company-cell">Hog's Head Inn</td>
+                    <td class="duration-cell">
+                        <h6>Dec 2014 - Dec 2015</h6>
+                    </td>
+                </tr>
+            </table>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a urna posuere, aliquet elit in,
+                fermentum ligula</p>
+        </div>
+        <hr />
+        <div class="work-item">
+            <h4>Assistant Shopkeeper</h4>
+            <table>
+                <tr>
+                    <td class="company-cell">The Apothecary</td>
+                    <td class="duration-cell">
+                        <h6>Sep 2012 - Mar 2014</h6>
+                    </td>
+                </tr>
+            </table>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a urna posuere, aliquet elit in,
+                fermentum ligula</p>
+        </div>
     </section>
 
     <!-- Education -->
-    <section class="education">
+    <section class="education card opac">
+        <h2>Education Details</h2>
+        <hr />
+        <div class="educ-item">
+            <div class="year-degree">
+                <em>2016 - 2018</em><br>
+                Auror Certificate
+            </div>
+            <div class="school-details">
+                <h4>Ministry of Magic</h4><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
 
+        <hr />
+        <div class="educ-item">
+            <div class="year-degree">
+                <em>2015 - 2017</em><br>
+                Master of Potions
+            </div>
+            <div class="school-details">
+                <h4>Hogwarts</h4><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <hr />
+        <div class="educ-item">
+            <div class="year-degree">
+                <em>2006 - 2013</em><br>
+                Basic Magic Diploma
+            </div>
+            <div class="school-details">
+                <h4>Hogwarts</h4><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </div>
+        </div>
     </section>
 
     <!-- Skills -->
-    <section class="skills">
-
+    <section class="skills card opac">
+        <h2>Skills</h2>
+        <hr />
+        <div class="skill-item">
+            <img src="assets/cloud-icon.png" alt="cloud icon">
+            <div class="skill-text-container">
+                <h4>Curse and Hex Negation</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="skill-item">
+            <img src="assets/mario-icon.png" alt="super mario icon">
+            <div class="skill-text-container">
+                <h4>Potion Brewing</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="skill-item">
+            <img src="assets/search-icon.png" alt="search icon">
+            <div class="skill-text-container">
+                <h4>Shape-Shifting</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="skill-item">
+            <img src="assets/wp-icon.png" alt="wordpress icon">
+            <div class="skill-text-container">
+                <h4>Dueling</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Send Message -->
-    <section class="message">
-
+    <!-- Message Me -->
+    <section class="message card opac" id="message-me">
+        <h2>Contact Me</h2>
+        <hr>
+        <div class="map-form-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15447.440121909327!2d121.0470371!3d14.5499957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf382855249943b23!2sGoogle%20Philippines!5e0!3m2!1sen!2sph!4v1642964663877!5m2!1sen!2sph"
+                width="85%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <fieldset>
+                    <table class="form-table">
+                        <tr>
+                            <td class="form-item"> <label>Name <input type="text" name="name" placeholder="Enter full name" required>
+                                </label>
+                            </td>
+                            <td class="form-item">
+                                <label id="email-label">Email <input type="email" id="email" placeholder="Enter email address"
+                                        required></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-item">
+                                <label id="phone-label">Phone <input type="text" id="phone" placeholder="Enter mobile number"
+                                        required></label>
+                            </td>
+                        </tr>
+                    </table>
+                    <label>
+                        <textarea name="message" rows="4" cols="68"
+                            placeholder="Enter your message here..."></textarea>
+                    </label>
+                </fieldset>
+        </div>
+        <button><a href="mailto:maxmiravite@gmail.com">Send Message</a></button>
     </section>
 
 </body>

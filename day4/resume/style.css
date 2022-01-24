@@ -4,8 +4,343 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 2300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background-color: #f7f7ff;
+}
+
+hr {
+    opacity: 40%;
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/***** TEXT *****/
+h1 {
+    font-size: 1.4rem;
+}
+h6 { /* small italic text */
+    font-style:italic;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+h3 { /* small slightly gray text */
+    font-size: 0.95rem;
+    color: rgb(94, 110, 124);
+    font-weight: normal;
+}
+
+h2 { /* card header */
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+h4 { /* role and company names */
+    font-size: 1rem;
+    /* different color like green */
+}
+
+section > p {
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+/***************/
+
+
+/* HEADER CARD */
 header {
-    height: 400px;
-    width: 200px;
+    height: 340px;
+    width: 325px;
     background-color: lightskyblue;
+    position: fixed;
+    top: 3%;
+    left: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > h1 {
+    margin-top: 10px;
+}
+
+header > h3 {
+    margin-top: 5px;
+}
+
+header > h4 {
+    margin-top: 5px;
+}
+
+.profile-pic {
+    width: 28%;
+    margin-top: 15px;
+}
+
+.proj-exp-container {
+    display: flex;
+    margin-top: 15px;
+
+}
+
+#proj {
+    padding: 20px;
+    border: 1px solid black;
+    border-left: none;
+}
+
+#exp {
+    padding: 20px;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+}
+
+.profile-buttons-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    height: 35px;
+    width: 110px;
+}
+
+/***************/
+
+/* CONTACT ME CARD */
+
+.contact {
+    height: 230px;
+    width: 325px;
+    background-color: lightgreen;
+    position: fixed;
+    top: 41%;
+    left: 23%;
+}
+
+.contact img {
+    width: 7%;
+    margin: 2px 5px;    
+}
+
+.contact h6 {
+    margin: 10px 10px;
+}
+
+
+.socials-container{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.mobile-container {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.email-container {
+    margin-left: 20px;
+}
+
+
+/***************/
+
+/* ABOUT ME CARD */
+.about {
+    height: 200px;
+    width: 650px;
+    margin-top: 30px;
+    margin-left: 320px;
+    padding-bottom: 20px;
+}
+
+.about > p {
+    width: 95%;
+    margin: 10px auto;
+}
+
+.about > button {
+    height: 50px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+/***************/
+
+/* EXPERIENCE */
+.experience {
+    height: 490px;
+    width: 650px;
+    margin-top: 20px;
+    margin-left: 320px;
+}
+
+.experience h4 {
+    font-size: 1rem;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.company-cell {
+    width: 150px;
+    font-weight: bold;
+    color:rgb(92, 181, 236);
+}
+
+.work-item > p {
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+
+/***************/
+
+/* EDUC BG CARD */
+.education {
+    background-color: lightsalmon;
+    height: 360px;
+    width: 650px;
+    margin-top: 20px;
+    margin-left: 320px;
+}
+
+.educ-item {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.year-degree {
+    display: flex;
+    width: 29%;
+}
+
+.school-details {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+
+.educ-item {
+    margin-top: 10px;
+}
+
+.education > hr {
+    margin-top: 5px;
+}
+
+/***************/
+
+/* SKILLS CARD */
+.skills {
+    clear: both;
+    height: 460px;
+    width: 650px;
+    margin-top: 20px;
+    margin-left: 320px;
+}
+
+.skill-item {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+.skill-item > img {
+    padding-right: 12px;
+}
+
+.skill-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/***************/
+
+/* CONTACT ME */
+.message {
+    height: 580px;
+    width: 650px;
+    margin-top: 20px;
+    margin-left: 320px;
+}
+
+.map-form-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label > input {
+    width: 200px;
+    font-size: 0.95rem;
+} 
+
+.form-table {
+    width: 600px;
+    padding: 5px;
+}
+
+.map-form-container > fieldset {
+    border: none;
+    margin-top: 10px;
+}
+
+.form-item {
+    padding: 8px;
+}
+
+textarea {
+    margin-top: 10px;
+    margin-left: 18px;
+}
+
+.message > button {
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+
+
+
+/* too lazy na to fix my code upstairs so i'll just put these here */
+.card {
+    background-color:#FFF;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.opac {
+    opacity: 60%;
+    transition-duration: 0.3s;
+}
+
+.opac:hover {
+    opacity: 100%;
 }
