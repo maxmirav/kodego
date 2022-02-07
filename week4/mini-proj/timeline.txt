@@ -4,4 +4,7 @@ day 1 (feb 7, 2020)
 -study bootstrap
 
 day 2 (feb 8, 2020)
--finalize layout
+-decide what pages/content are to be included in the website
+-decide on the layout
+-ask myself if i have enough design skills/resources to pull this off
+-create barebones html
