@@ -1,0 +1,7 @@
+day 1 (feb 7, 2020)
+-review flexbox
+-review css grid
+-study bootstrap
+
+day 2 (feb 8, 2020)
+-finalize layout

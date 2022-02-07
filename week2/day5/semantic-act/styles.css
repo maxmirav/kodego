@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    height: 1080px;
+}
+
+.title {
+    height: 100px;
+    background-color: lightgreen;
+}
+
+h1 {
+    border: 2px solid red;
+    text-align: center;
+    display: inline;
+    margin: auto;
+}

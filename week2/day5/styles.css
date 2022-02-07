@@ -1,0 +1,57 @@
+body{
+    font: 14px Arial;
+    margin: 0px;
+}
+
+.header {
+    padding: 10px 20px;
+    background-color: pink;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.container {
+    width: 100%;
+    background-color: powderblue;
+}
+
+.nav,
+.main {
+    float: left;
+    padding: 20px;
+    min-height: 170px;
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 20%;
+    background-color: lightgreen;
+}
+
+.nav ul {
+    list-style: none;
+    line-height: 24px;
+    padding: 0px;
+}
+
+.nav ul li a {
+    color: brown;
+}
+
+.main {
+    width: 80%;
+    background-color: lightblue;
+}
+
+.footer {
+    background-color: plum;
+    text-align: center;
+    padding: 5px;
+    clear: both;
+}
+
+.clearfix::after{
+    display: block;
+}
