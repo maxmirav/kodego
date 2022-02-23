@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            max-width: 400px;
+        }
+        .boxform {
+            background-color: aquamarine;
+            box-sizing: border-box;
+            padding: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Examples of DOM Toggles</h2>
+    <button id="btn-register" value="register">Click to Register</button>
+    <br>
+    <div id="reg-div">
+        <form>
+            <label for="">Username</label>
+            <input type="text" name="username">
+            <label for="">Password</label>
+            <input type="password" name="password"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <p id="para">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox</p>
+    <button id="hide">Hide</button>
+
+    <script>
+        let element = document.getElementById("reg-div");
+        element.style.display = "none";
+        let btnRegister = document.getElementById("btn-register");
+        btnRegister.addEventListener('click', () => {
+            if (element.style.display === "none"){
+                element.style.display = "block";
+            }
+            else {element.style.display = "none";}
+            ///////////////////////////////////////////////////////////////
+            //IMPORTANT! - LINE BELOW FORCE ADDS A CSS STYLE TO THE THING//
+            element.classList.toggle("boxform");
+        })
+        let text = document.getElementById("para");
+
+    </script>
+</body>
+</html>
