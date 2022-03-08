@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        class Vehicle{
+            constructor() {
+                console.log("The base vehicle");
+            }
+            displaytype(){
+                console.log("car");
+            }
+            getPropulsion(){
+                return ("Gas powered");
+            }
+        };
+
+        //let vehicle = new Vehicle;
+        //vehicle.displaytype();
+        //console.log(typeof(vehicle));
+        //console.log(vehicle instanceof Vehicle);
+
+        //class expression - what in the world is a class expression 
+        let vehiclevar = class{
+            constructor() {
+                console.log("running automatically this one is too");
+            }
+            displaytype(){
+                console.log("airplane");
+            }
+        }
+
+        //new vehiclevar();
+
+        class Honda extends Vehicle{
+            constructor(){
+                super();
+                console.log("The Honda vehicle");
+            }
+        }
+        //let honda = new Honda();
+
+        class Tesla extends Vehicle{
+            getPropulsion(){
+                console.log(`Hybrid is ${super.getPropulsion()} and electric powered`);
+            }
+        }
+
+        let tesla = new Tesla();
+        tesla.getPropulsion();
+
+        class Parentvehicle{
+            constructor(brand, model, color, year){
+                this.brand = brand;
+                this.model = model;
+                this.color = color;
+                this.year= year;
+            }
+            getBrandModel(){
+                return `${this.brand} ${this.model}`;
+            }
+            getCarAge(){
+                let currentYear = new Date().getFullYear();
+                return `This car is ${currentYear - this.year} years old`;
+            }
+        }
+
+        class Car extends Parentvehicle{
+            getBrandModel(){
+                return `${super.getBrandModel()} calling parent vehicle class`;
+            }
+        }
+
+        let car = new Car("honda", "suv", "blue", 2021);
+        console.log(car.getCarAge()); 
+
+        //here's a new class
+        class Square{
+            constructor(width){
+                this.width = width;
+            }
+            get height(){
+                return this.width;
+            }
+            set height(height){
+                this.width = height;
+                console.log(`set a new height of ${height}`);
+            }
+            get area(){
+                return this.width * this.height;
+            }
+        }
+
+        let square = new Square(2);
+        console.log(square.height);
+        console.log(square.area);
+        square.height = 5;
+        console.log(square.height);
+        console.log(square.area);
+
+    </script>
+</body>
+</html>

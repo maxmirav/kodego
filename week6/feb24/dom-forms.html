@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM FORMS Examples</title>
+</head>
+<body>
+    <!--this.form gets the form itself-->
+    <form action="" name="myForm">
+        <label for="">Text in a box</label>
+        <input type="text" name="inputBox" id="">
+        <input type="button" value="click" name="button1" onclick="clickResult(this.form)">
+        <input type="button" value="read" name="button2" onclick ="readText(this.form)">
+        <input type="button" value="write" name="button3" onclick ="writeText(this.form)">
+
+        <p>
+            <input type="radio" name="radBtn" value="radBtn1">Radio Button 1
+            <input type="radio" name="radBtn" value="radBtn2">Radio Button 2
+            <input type="radio" name="radBtn" value="radBtn3">Radio Button 3
+            <input type="button" value="click Radio Button" name="radButton" onclick="testButton(this.form)">
+        </p>
+        <p>
+            <input type="checkbox" name="accept" id="accept">Accept the Terms and Agreement
+            <button type="button" id="btn">Submit</button>
+        </p>
+        <p>Checkboxes: Checkbox Toggle</p>
+        <input type="checkbox" name="selectCheck" id="" onclick="toggle(this)">Select All 
+        <input type="checkbox" name="checked" id="">Check 1
+        <input type="checkbox" name="checked" id="">Check 2
+        <input type="checkbox" name="checked" id="">Check 3
+        <input type="checkbox" name="checked" id="">Check 4
+    </form>
+
+    <p>Checkbox: Multiple click</p>
+    <input type="checkbox" name="colors" id="color1">Red
+    <input type="checkbox" name="colors" id="color2">Green
+    <input type="checkbox" name="colors" id="color3">Blue   
+    <input type="checkbox" name="colors" id="color4">Orange
+    <button id="btn-color">Get Selected Colors</button>
+
+    <script>
+        function readText(form){
+            let formText = form.inputBox.value;
+            alert(formText);
+        }
+
+        function writeText(form){
+            form.inputBox.value = "Have a nice day!";
+        }
+
+        function testButton(form){
+            
+            //this works - but form variable that is passed as parameter is not necessary 
+            //let myAnswer = document.querySelector('input[name="radBtn"]:checked').value;
+            //alert(myAnswer);
+
+            //but this one is shorter
+            let radValue = form.radBtn.value;
+            alert(radValue);            
+        }
+
+        let subBtn = document.getElementById('btn');
+        subBtn.addEventListener("click", () => {
+            let checkBox = document.getElementById("accept").value;
+            alert(`${checkBox} Accept`);
+        })
+
+        function toggle(form){
+            let checkboxes = document.getElementsByName('checked');
+            for(let i = 0; i < checkboxes.length; i++){
+                checkboxes[i].checked = form.checked;
+            }
+        }
+        
+        //for getting colors
+        let btnColor = document.querySelector("btn-color");
+
+        btnColor.addEventListener('click', () => {
+            alert(getCheckboxValues('colors'));
+        })
+
+        function getCheckboxValues(colors){
+            let arr = [];
+            let checkboxes1 = document.querySelectorAll(`input[name=${colors}']:checked`);
+
+            checkboxes
+        }
+
+        //if (accept){
+               // alert('Accept');
+         //   }
+         //   else{
+          //      alert('Tick the checkbox');
+         //   }
+
+
+
+    </script>
+</body>
+</html>

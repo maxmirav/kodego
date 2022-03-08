@@ -18,6 +18,23 @@
     </style>
 </head>
 <body>
+
+    <h2>List of Fruits</h2>
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    
+    <form>
+        Fruits:
+        <input type="text" name="fruits" id="addedFruits"><br>
+        Quantity:
+        <input type="number" name="quantity" id="quantity">
+    </form>
+        <button id="btn-fruits">Add Fruits</button>
+
+
+
     <h2>Examples of DOM Toggles</h2>
     <button id="btn-register" value="register">Click to Register</button>
     <br>
@@ -34,6 +51,37 @@
     <p id="para">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox</p>
     <button id="hide">Hide</button>
 
+    <form action="">
+        <label for="">Select JS Framework</label>
+        <select name="" id="mySelect">
+            <option value="Angular">Angular</option>
+            <option value="ReactJS">ReacsdfdfsdfstJS</option>
+            <option value="VUEJS">VUEJS</option>
+            <option value="EmberJS">EmberJS</option>
+        </select>
+        <br>
+    </form>
+    <button id="btn-JS">Get the Selected Index</button>
+    <button id="btn-JS2">Display the Selected Index</button>
+
+    <br>
+    <form action="">
+        <label for="">Select Programming Languages</label>
+        <select name="" id="prog" multiple>
+            <option value="C">C</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Ruby">Ruby on Rails</option>
+            <option value="Java">Java</option>
+        </select>
+        <br>
+        <button id="submit1">Select Using For Loop</button>
+        <button id="submit2">Select Using QuerySelectorAll</button>
+        <button id="submit3">Selected Options Property</button>
+        <button id="submit4">Select Using Filter and Map Method</button>
+    </form>
+
+
     <script>
         let element = document.getElementById("reg-div");
         element.style.display = "none";
@@ -48,6 +96,83 @@
             element.classList.toggle("boxform");
         })
         let text = document.getElementById("para");
+
+        //ADDING FRUITS
+        let btnFruits = document.getElementById("btn-fruits");
+        btnFruits.addEventListener('click', addFruit);
+
+        function addFruit(){
+            let fruit = document.getElementById("addedFruits").value + " x " + (document.getElementById("quantity").value).toString();
+            let li = document.createElement('li');
+            let textNode = document.createTextNode(fruit);
+            li.appendChild(textNode);
+            document.querySelector('#fruits').appendChild(li);
+        }
+
+        //JS FRAMEWORKS
+        let btnJS = document.querySelector("#btn-JS");
+        let btnJS2 = document.querySelector("#btn-JS2");
+        let mySelect = document.querySelector("#mySelect")
+
+
+        //using ONCLICK
+        btnJS.onclick = () => {
+            alert(mySelect.selectedIndex);
+        }
+
+        //SELECT OPTION THAT WILL DISPLAY INDEX AND TEXT CONTENT
+        btnJS2.addEventListener('click', () => {
+            let i = mySelect.selectedIndex;
+            let item = mySelect[i].textContent;
+            alert(`Index: ${i} is ${item}`);
+        })
+
+        //////////////SELECT USING FOR LOOP
+
+        let submit = document.querySelector("#submit1");
+        let progList = document.querySelector("#prog");
+
+        //SELECTING MULTIPLE ITEMS WOW
+        submit1.addEventListener('click', () => {
+            let arr1 = [];
+            for (let item of progList.options){
+                if(item.selected){
+                    arr1.push(item.textContent);
+                }
+            }
+            alert(arr1);
+        })
+
+        //QUERYSELECTORALL
+
+        let submit2 = document.querySelector("#submit2");
+
+        submit2.addEventListener('click', () => {
+            let progList2 = document.querySelectorAll("#prog :checked");
+            let mapProg = [...progList2].map(option => option.value);
+            //let mapProg = progList2.map(option => option.value );
+            alert(mapProg);
+            //console.log(progList2);
+        })
+        
+        //USING SELECTED OPTIONS PROPERTY
+
+        let submit3 = document.getElementById("submit3");
+
+        submit3.addEventListener('click', () => {
+            let progOptions = document.getElementById("prog");
+            let mapProg2 = [...progOptions.selectedOptions].map(option => option.value);
+            alert(mapProg2);
+        });
+
+        //SELECT USING FILTER AND MAP METHOD
+        let submit4 = document.getElementById("submit4");
+
+        submit4.addEventListener('click', () => {
+            let progOptions2 = document.getElementById("prog");
+            let mapProg3 = [...progOptions2.options].filter(option => option.selected).map(option => option.value);
+            alert(mapProg3);
+        })
 
     </script>
 </body>

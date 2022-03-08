@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #diagram td {
+            text-align: center;
+            padding: 10px;
+            vertical-align: bottom;
+        }
+
+        #diagram div {
+            margin: auto;
+        }
+
+        #diagram {
+            margin-bottom: 20px;
+        }
+
+        #diagram tr th {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Investment</h2>
+    <form name="calculator">
+        <table id="diagram">
+            <tr>
+                <td>Initial Deposit</td>
+                <td><input type="number" name="money" value="10000" required oninput="calculate()"/></td>
+            </tr>
+            <tr>
+                <td>How Many Months?</td>
+                <td><select name="months" onchange="calculate()">
+                        <option value="3">3 months minimum</option>
+                        <option value="6">6 months half year</option>
+                        <option value="12">1 months year</option>
+                        <option value="18">18 months(1.5 year)</option>
+                        <option value="24">24 months (2 years)</option>
+                        <option value="30">30 months (2.5 years)</option>
+                        <option value="36">36 months (3 years)</option>
+                        <option value="60">60 months (5 years)</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Interest Per year</td>
+                <td><input type="number" name="interest" value="5" required oninput="calculate()"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Initial Amount</th>
+                <th>With Interest</th>
+            </tr>
+            <tr>
+                <th id="initial-amount"></th>
+                <th id="with-interest"></th>
+            </tr>
+            <tr>
+                <td>
+                    <div style="background-color:red; width: 40px; height: 100px;"></div>
+                </td>
+                <td>
+                    <div style="background-color: blue; width: 40px; height: 0px;" id="height-interest"></div>
+                </td>
+            </tr>
+        </table>
+
+
+
+    </form>
+
+
+    <!-- JS STARTS HERE -->
+    <script>
+        let form = document.forms.calculator;
+        // form.money.oninput = calculate();
+        // form.months.onchange = calculate();
+        // form.interest.oninput = calculate();
+
+        function calculate() {
+            let initial = parseInt(form.money.value, 10);
+            if (!initial) return; //validate na / return kaagad kung may error man
+            let interest = form.interest.value * 0.01;
+            if (!interest) return;
+            let months = form.months.value / 12;
+            if (!months) return;
+
+
+            let result = Math.round(initial + (initial * interest));
+
+            let heightInterest = (result / initial) * 100;
+
+
+            document.getElementById("with-interest").innerHTML = result;
+            document.getElementById("height-interest").style.height = heightInterest + 'px';
+            document.getElementById("initial-amount").innerHTML = form.money.value;
+        }
+    </script>
+</body>
+
+</html>
