@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Text Settings */
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    font-size: 0.80rem;
+    padding: 0 5px;
+}
+/* End of Text Settings */
+
+li {
+    display: inline;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+.navigation-container {
+    margin-top: 10px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.products-icon-container {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+.products-icon-container:hover {
+    background-color: lightgrey;
+    border-radius: 100%;
+}
+
+.products-icon {
+    object-fit: contain;
+    height: 60%;
+    width: 60%;
+    /*settings below to nudge the little icon to the middle of the circle*/
+    margin-right: 7px;
+    margin-top: 7px;
+}
+
+.sign-in-button {
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    background-color: #1a73e8;
+    border-radius: 5px;
+}
+
+main {
+    text-align: center;
+    margin: 200px;
+}
+
+input[type=text] {
+    display: block;
+    width: 600px;
+    height: 40px;
+    border: none;
+    box-shadow: inset 0 0 1px #b1b1b1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    background: lightgrey;
+}
