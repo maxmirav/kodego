@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
+    <script src="https://kit.fontawesome.com/a71e08d3e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,39 +16,46 @@
                 <li><a href="#">Images</a></li>
                 <li>
                     <div class="products-icon-container">
-                        <a href=""><img src="images/products_icon.png" alt="products symbol" class="products-icon"></a>
+                        <a href="https://about.google/products/"><img src="images/products_icon.png" alt="products symbol" class="products-icon"></a>
                     </div>
                 </li>
-                <li><button class="sign-in-button">Sign In</button></li>
+                <li><a href="https://accounts.google.com/signin/v2"><button class="sign-in-button">Sign In</button></a></li>
             </ul>
         </nav>
     </header> 
     <main>
         <img src="images/google_logo.png" alt="google logo">
-        <input type="text">
-        <button>Google Search</button>
-        <button>I'm Feeling Lucky</button>
-        <p>Google offered in: <a href="#">Filipino</a> <a href="#">Cebuano</a></p>
+        <form class="search-bar-container">
+            <button type="submit" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="search">
+        </form>
+        <div class="search-buttons-container">
+            <button class="search-button">Google Search</button>
+            <button class="search-button">I'm Feeling Lucky</button>
+        </div>
+        <p class="offered-languages-text">Google offered in: <a href="#"><span class="language-text">Filipino</span></a> <a href="#"><span class="language-text">Cebuano</span></a></p>
     </main>
     <footer>
-        <div>
+        <div class="footer-section">
             <ul>
                 <li>Philippines</li>
             </ul>
         </div>
-        <div>
-            <ul>
-                <li>About</li>
-                <li>Advertising</li>
-                <li>Business</li>
-                <li>How Search works</li>
+        <div class="footer-section">
+            <ul class="final-footer-section left">
+                <li><a href="https://about.google/">About</a></li>
+                <li><a href="https://ads.google.com/">Advertising</a></li>
+                <li><a href="https://www.google.com/intl/en_ph/business/">Business</a></li>
+                <li><a href="https://www.google.com/search/howsearchworks/">How Search works</a></li>
             </ul>
-            <ul>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Settings</li>
+            <ul class="final-footer-section right">
+                <li><a href="https://policies.google.com/privacy">Privacy</a></li>
+                <li><a href="https://policies.google.com/terms">Terms</a></li>
+                <li><a href="https://www.google.com/preferences">Settings</a></li>
             </ul>
         </div>
     </footer>
+
+
 </body>
 </html>
